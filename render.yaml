@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: your-service-name
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn crud.wsgi:application
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.9.6
