@@ -9,7 +9,7 @@ services:
     startCommand: |
       python manage.py migrate
       python manage.py loaddata data.json
-      gunicorn myproject.wsgi:application
+      gunicorn crud.wsgi:application
     envVars:
       - key: DATABASE_URL
         value: postgresql://grocery_xjtu_user:Q488SW0moZCcgVaAQ5Gu0QKOreURbUi8@dpg-d137keemcj7s73826n90-a/grocery_xjtu
