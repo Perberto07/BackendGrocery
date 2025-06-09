@@ -29,7 +29,7 @@ LOGGING = {
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['backendgrocery-5rpu.onrender.com', '192.168.0.139', '192.168.68.11', '127.0.0.1', 'localhost' ]
+ALLOWED_HOSTS = ['backendgrocery-5rpu.onrender.com', '192.168.0.139', '192.168.68.11', '127.0.0.1', 'https://grocery-delta-six.vercel.app/login' ]
 
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ORIGIN_WHITELIST = (
