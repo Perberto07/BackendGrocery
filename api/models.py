@@ -9,7 +9,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
-    product_name = models.CharField(max_length=40)
+    product_name = models.CharField(max_length=40, unique=True)
     product_price = models.DecimalField(max_digits=10, decimal_places=2)
     product_barcode = models.CharField(max_length=50, null=True, blank=True)
     product_category = models.ForeignKey(Category, on_delete=models.CASCADE)  
@@ -19,7 +19,7 @@ class Product(models.Model):
     
 class Customer(models.Model):
     customer_id = models.AutoField(primary_key=True)
-    customer_name = models.CharField(max_length=40)
+    customer_name = models.CharField(max_length=40, unique=True)
     customer_address = models.CharField(max_length=100, null=True, blank=True)
     customer_number = models.IntegerField(null=True, blank=True)
 
