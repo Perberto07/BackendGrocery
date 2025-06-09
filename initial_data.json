@@ -21,14 +21,6 @@
 
   {"model": "api.product", "pk": 6, "fields": {"product_name": "meron", "product_price": "13.00", "product_category": 1}},
 
-
-
-  {"model": "api.customer", "pk": 1, "fields": {"customer_name": "Banda", "customer_address": "blk 6 baseco", "customer_number": 9675061551}},
-
-  {"model": "api.customer", "pk": 2, "fields": {"customer_name": "Customer", "customer_address": "Baseco", "customer_number": null}},
-
-  {"model": "api.customer", "pk": 3, "fields": {"customer_name": "Evelyn", "customer_address": "342sdfsd", "customer_number": -1}},
-
   {"model": "api.customer", "pk": 4, "fields": {"customer_name": "Evelyn", "customer_address": "NO Address", "customer_number": 0}},
 
   {"model": "api.customer", "pk": 7, "fields": {"customer_name": "wala", "customer_address": null, "customer_number": null}},
