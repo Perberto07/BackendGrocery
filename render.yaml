@@ -1,11 +1,15 @@
 services:
   - type: web
-    name: your-service-name
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn crud.wsgi:application
+    name: BackendGrocery
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+    startCommand: |
+      python manage.py migrate
+      python manage.py loaddata data.json
+      gunicorn myproject.wsgi:application
     envVars:
-      - key: DJANGO_SECRET_KEY
-        generateValue: true
-      - key: PYTHON_VERSION
-        value: 3.9.6
+      - key: DATABASE_URL
+        value: postgresql://grocery_xjtu_user:Q488SW0moZCcgVaAQ5Gu0QKOreURbUi8@dpg-d137keemcj7s73826n90-a/grocery_xjtu
