@@ -8,21 +8,6 @@
         "category_name": "Coffee"
     },
     {
-        "transaction_id": "0668cdf9-f217-4436-852d-cc9c6cd097cb",
-        "create_at": "2025-06-09T09:09:00.527158+00:00",
-        "customer_id": 1
-    },
-    {
-        "transaction_id": "a9c0cc2c-bccc-419a-8058-75474190143a",  
-        "create_at": "2025-06-10T10:11:28.762251+00:00",
-        "customer_id": 1
-    },
-    {
-        "transaction_id": "3824e614-e374-4cf9-b22a-9d990e8bfbda",
-        "create_at": "2025-06-10T10:41:49.695272+00:00", 
-        "customer_id": 4
-    },
-    {
         "customer_id": 1,
         "customer_name": "Banday",
         "customer_address": "baseco Manila",
