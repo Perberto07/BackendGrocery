@@ -1,249 +1,191 @@
 [
-    
-    {
-        "model": "auth.user",
-        "pk": 1,
-        "fields": {
-            "password": "pbkdf2_sha256$1000000$nyD5fD1reB5u4IsinyuSdP$cCzB5/v4/Qtz+t29DTjLFyfqdKJ3ENRCcNOcvL5ZDSI=",
-            "last_login": "2025-05-21T02:47:46.890Z",
-            "is_superuser": true,
-            "username": "perberto",
-            "first_name": "",
-            "last_name": "",
-            "email": "",
-            "is_staff": true,
-            "is_active": true,
-            "date_joined": "2025-05-16T02:40:28.944Z",
-            "groups": [],
-            "user_permissions": []
-        }
+     {
+        "id": 1,
+        "category_name": "Biscuit"
     },
     {
-        "model": "contenttypes.contenttype",
-        "pk": 7,
-        "fields": {
-            "app_label": "api",
-            "model": "category"
-        }
+        "id": 2,
+        "category_name": "Coffee"
     },
     {
-        "model": "contenttypes.contenttype",
-        "pk": 8,
-        "fields": {
-            "app_label": "api",
-            "model": "customer"
-        }
+        "transaction_id": "0668cdf9-f217-4436-852d-cc9c6cd097cb",
+        "create_at": "2025-06-09T09:09:00.527158+00:00",
+        "customer_id": 1
     },
     {
-        "model": "contenttypes.contenttype",
-        "pk": 9,
-        "fields": {
-            "app_label": "api",
-            "model": "product"
-        }
+        "transaction_id": "a9c0cc2c-bccc-419a-8058-75474190143a",  
+        "create_at": "2025-06-10T10:11:28.762251+00:00",
+        "customer_id": 1
     },
     {
-        "model": "contenttypes.contenttype",
-        "pk": 10,
-        "fields": {
-            "app_label": "api",
-            "model": "order"
-        }
+        "transaction_id": "3824e614-e374-4cf9-b22a-9d990e8bfbda",
+        "create_at": "2025-06-10T10:41:49.695272+00:00", 
+        "customer_id": 4
     },
     {
-        "model": "contenttypes.contenttype",
-        "pk": 11,
-        "fields": {
-            "app_label": "api",
-            "model": "transactions"
-        }
+        "customer_id": 1,
+        "customer_name": "Banday",
+        "customer_address": "baseco Manila",
+        "customer_number": 93038877
     },
     {
-        "model": "api.category",
-        "pk": 1,
-        "fields": {
-            "category_name": "Biscuit"
-        }
+        "customer_id": 4,
+        "customer_name": "Evelyn", 
+        "customer_address": "NO Address",
+        "customer_number": 0
     },
     {
-        "model": "api.category",
-        "pk": 2,
-        "fields": {
-            "category_name": "Coffee"
-        }
+        "product_id": 1,
+        "product_name": "Rebis",
+        "product_price": 34.00,
+        "product_barcode": null,
+        "product_category_id": 1
     },
     {
-        "model": "api.product",
-        "pk": 1,
-        "fields": {
-            "product_name": "Rebis",
-            "product_price": "34.00",
-            "product_barcode": null,
-            "product_category": 1
-        }
+        "product_id": 2,
+        "product_name": "Fita",
+        "product_price": 40.00,
+        "product_barcode": null,
+        "product_category_id": 1
     },
     {
-        "model": "api.product",
-        "pk": 2,
-        "fields": {
-            "product_name": "Fita",
-            "product_price": "40.00",
-            "product_barcode": null,
-            "product_category": 1
-        }
+        "product_id": 3,
+        "product_name": "Hansel",
+        "product_price": 50.00,
+        "product_barcode": null,
+        "product_category_id": 1
     },
     {
-        "model": "api.product",
-        "pk": 3,
-        "fields": {
-            "product_name": "Hansel",
-            "product_price": "50.00",
-            "product_barcode": null,
-            "product_category": 1
-        }
+        "product_id": 4,
+        "product_name": "wala",
+        "product_price": 50.00,
+        "product_barcode": null,
+        "product_category_id": 1
     },
     {
-        "model": "api.product",
-        "pk": 4,
-        "fields": {
-            "product_name": "wala",
-            "product_price": "50.00",
-            "product_barcode": null,
-            "product_category": 1
-        }
+        "product_id": 5,
+        "product_name": "wlaa",
+        "product_price": 12.00,
+        "product_barcode": null,
+        "product_category_id": 1
     },
     {
-        "model": "api.product",
-        "pk": 5,
-        "fields": {
-            "product_name": "wlaa",
-            "product_price": "12.00",
-            "product_barcode": null,
-            "product_category": 1
-        }
+        "product_id": 6,
+        "product_name": "meron",
+        "product_price": 13.00,
+        "product_barcode": null,
+        "product_category_id": 1
     },
     {
-        "model": "api.product",
-        "pk": 6,
-        "fields": {
-            "product_name": "meron",
-            "product_price": "13.00",
-            "product_barcode": null,
-            "product_category": 1
-        }
+        "product_id": 7,
+        "product_name": "Johnson 25g",
+        "product_price": 18.00,
+        "product_barcode": "48032742",
+        "product_category_id": 1
     },
     {
-        "model": "api.customer",
-        "pk": 4,
-        "fields": {
-            "customer_name": "Evelyn",
-            "customer_address": "NO Address",
-            "customer_number": 0
-        }
+        "product_id": 8,
+        "product_name": "Mighty Green 1 pack",
+        "product_price": 146.00,
+        "product_barcode": "48041812",
+        "product_category_id": 2
     },
     {
-        "model": "api.customer",
-        "pk": 7,
-        "fields": {
-            "customer_name": "wala",
-            "customer_address": null,
-            "customer_number": null
-        }
+        "product_id": 9,
+        "product_name": "Winston 1pack",
+        "product_price": 162.00,
+        "product_barcode": "48040594",
+        "product_category_id": 2
     },
     {
-        "model": "api.customer",
-        "pk": 8,
-        "fields": {
-            "customer_name": "asd",
-            "customer_address": "wa",
-            "customer_number": 1
-        }
+        "product_id": 10,
+        "product_name": "Marlboro lights 1 pack",
+        "product_price": 159.00,
+        "product_barcode": "48044301",
+        "product_category_id": 2
     },
     {
-        "model": "api.customer",
-        "pk": 9,
-        "fields": {
-            "customer_name": "wa",
-            "customer_address": "",
-            "customer_number": 4
-        }
+        "product_id": 11,
+        "product_name": "Marlboro black",
+        "product_price": 159.00,
+        "product_barcode": "95509433",
+        "product_category_id": 1
     },
     {
-        "model": "api.customer",
-        "pk": 10,
-        "fields": {
-            "customer_name": "wasda",
-            "customer_address": null,
-            "customer_number": null
-        }
+        "product_id": 12,
+        "product_name": "Marlboro blue 1 pack",
+        "product_price": 159.00,
+        "product_barcode": "48042772",
+        "product_category_id": 1
     },
     {
-        "model": "api.customer",
-        "pk": 11,
-        "fields": {
-            "customer_name": "banda",
-            "customer_address": "baseco",
-            "customer_number": 29032
-        }
+        "product_id": 13,
+        "product_name": "Marlboro Red",
+        "product_price": 159.00,
+        "product_barcode": "48044295",
+        "product_category_id": 1
     },
     {
-        "model": "api.transactions",
-        "pk": "16c50ad8-2c59-4159-8e5b-784959f6f857",
-        "fields": {
-            "customer": 2,
-            "create_at": "2025-05-21T02:49:45.999Z"
-        }
+        "product_id": 14,
+        "product_name": "Fortune White 1 pack",
+        "product_price": 150.00,
+        "product_barcode": "48043717",
+        "product_category_id": 1
     },
     {
-        "model": "api.transactions",
-        "pk": "81490b72-10ed-461c-9ec6-d2febbb99b1a",
-        "fields": {
-            "customer": 4,
-            "create_at": "2025-05-21T02:48:16.798Z"
-        }
+        "product_id": 15,
+        "product_name": "Camel 1 pack",
+        "product_price": 128.00,
+        "product_barcode": "40329055",
+        "product_category_id": 1
     },
     {
-        "model": "api.transactions",
-        "pk": "92fefa77-089a-4895-8c7e-cfc24cfa2566",
-        "fields": {
-            "customer": 11,
-            "create_at": "2025-05-21T02:48:08.792Z"
-        }
+        "product_id": 16,
+        "product_name": "Canival menthol 1pack",
+        "product_price": 75.00,
+        "product_barcode": "8801116025770",
+        "product_category_id": 1
     },
     {
-        "model": "api.order",
-        "pk": 1,
-        "fields": {
-            "items": "92fefa77-089a-4895-8c7e-cfc24cfa2566",
-            "product": 2,
-            "quantity": 3
-        }
+        "product_id": 17,
+        "product_name": "Carnival Red 1 pack",
+        "product_price": 75.00,
+        "product_barcode": "7801124088607",
+        "product_category_id": 1
     },
     {
-        "model": "api.order",
-        "pk": 2,
-        "fields": {
-            "items": "16c50ad8-2c59-4159-8e5b-784959f6f857",
-            "product": 4,
-            "quantity": 3
-        }
+        "product_id": 18,
+        "product_name": "Chesterfield red 1 pack",
+        "product_price": 127.00,
+        "product_barcode": "48044165",
+        "product_category_id": 1
     },
     {
-        "model": "api.order",
-        "pk": 3,
-        "fields": {
-            "items": "92fefa77-089a-4895-8c7e-cfc24cfa2566",
-            "product": 2,
-            "quantity": 1
-        }
+        "product_id": 19,
+        "product_name": "Delico",
+        "product_price": 100.00,
+        "product_barcode": "8997237720653",
+        "product_category_id": 2
     },
     {
-        "model": "api.order",
-        "pk": 4,
-        "fields": {
-            "items": "81490b72-10ed-461c-9ec6-d2febbb99b1a",
-            "product": 6,
-            "quantity": 12
-        }
+        "product_id": 20,
+        "product_name": "Agua",
+        "product_price": 100.00,
+        "product_barcode": "4800067453513",
+        "product_category_id": 2
+    },
+    {
+        "product_id": 21,
+        "product_name": "Tender care",
+        "product_price": 59.00,
+        "product_barcode": "8850006593561",
+        "product_category_id": 1
+    },
+    {
+        "product_id": 22,
+        "product_name": "Stapler",
+        "product_price": 10.00,
+        "product_barcode": "4902870766290",
+        "product_category_id": 1
     }
 ]
