@@ -12,4 +12,4 @@ services:
       gunicorn crud.wsgi:application
     envVars:
       - key: DATABASE_URL
-        value: postgresql://grocery_xjtu_user:Q488SW0moZCcgVaAQ5Gu0QKOreURbUi8@dpg-d137keemcj7s73826n90-a/grocery_xjtu
+        value: postgresql://dbgrocery_user:CRB5XvnJuUvDXzifaDSt9Sn0VeH9amWd@dpg-d16p9j8dl3ps739m2jpg-a/dbgrocery

@@ -2,6 +2,7 @@ from pathlib import Path
 from datetime import timedelta
 import dj_database_url
 import os
+from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,6 +30,7 @@ LOGGING = {
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 AUTH_USER_MODEL = 'users.User'
+load_dotenv()
 
 ALLOWED_HOSTS = ['backendgrocery-5rpu.onrender.com', '192.168.0.139', '192.168.68.11', '127.0.0.1', 'https://grocery-delta-six.vercel.app' ]
 
@@ -97,7 +99,7 @@ WSGI_APPLICATION = 'crud.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv('DATABASE_URL'),
@@ -105,7 +107,17 @@ DATABASES = {
         ssl_require=True
     )
 }
-
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dbgrocery',
+        'USER': 'dbgrocery_user',
+        'PASSWORD': 'CRB5XvnJuUvDXzifaDSt9Sn0VeH9amWd',
+        'HOST': 'dpg-d16p9j8dl3ps739m2jpg-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (  
