@@ -28,6 +28,7 @@ LOGGING = {
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+AUTH_USER_MODEL = 'users.User'
 
 ALLOWED_HOSTS = ['backendgrocery-5rpu.onrender.com', '192.168.0.139', '192.168.68.11', '127.0.0.1', 'https://grocery-delta-six.vercel.app' ]
 
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'api',
+    'users',
     'rest_framework_simplejwt',
     
 ]
