@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'crud.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv('DATABASE_URL'),
@@ -107,17 +107,7 @@ DATABASES = {
         ssl_require=True
     )
 }
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dbgrocery',
-        'USER': 'dbgrocery_user',
-        'PASSWORD': 'CRB5XvnJuUvDXzifaDSt9Sn0VeH9amWd',
-        'HOST': 'dpg-d16p9j8dl3ps739m2jpg-a.oregon-postgres.render.com',
-        'PORT': '5432',
-    }
-}
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (  
