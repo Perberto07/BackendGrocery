@@ -10,7 +10,9 @@ router.register('category', CategoryViewSet, basename='category' )
 router.register('transaction', TransactionViewSet, basename='transaction' )
 #router.register('protected', ProtectedViewSet, basename='protected' )
 urlpatterns = [
-    path('protected/', ProtectedViewSet.as_view(), name='protected'),
+    path('top-customers/', top_customers, name='top-customers'),
+    path('top-products/', most_bought_products, name='top-products'),
+    path('daily-sales/', daily_sales, name='daily_sales'),
 ]  
 
 
