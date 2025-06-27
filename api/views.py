@@ -20,11 +20,10 @@ class ProtectedViewSet(APIView):
     def get(self, request):
         return Response('This is a protected view. You are authenticated.', status=status.HTTP_200_OK)
 
-
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     
     def list(self, request):
         queryset = self.get_queryset()
@@ -82,7 +81,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
-    queryset = Category.objects.all()  # ✅ must use .all()
+    queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = [IsAuthenticated]
 
@@ -125,13 +124,12 @@ class CategoryViewSet(viewsets.ModelViewSet):
         category = get_object_or_404(self.queryset, pk=pk)
         category.delete()
         
- 
 class CustomerViewSet(viewsets.ModelViewSet):
 
     queryset = Customer.objects.all().annotate(
     upper_name=Upper('customer_name')).order_by('upper_name')
     serializer_class = CustomerSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
     def list(self, request):
         queryset = self.get_queryset()
@@ -173,12 +171,11 @@ class CustomerViewSet(viewsets.ModelViewSet):
         customer = get_object_or_404(self.queryset, pk=pk)
         customer.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-    
+   
 class TransactionViewSet(viewsets.ModelViewSet):
     queryset = Transactions.objects.all()
     serializer_class = TransactionSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
     def list(self, request):
         queryset = self.get_queryset()
@@ -192,8 +189,7 @@ class TransactionViewSet(viewsets.ModelViewSet):
             return Response(serializer.data)
         else:
             return Response(serializer.errors, status=400)
-
-
+    
 # Below is views for chart-display dashboard in Frontend
 
 @api_view(['GET'])
@@ -284,4 +280,4 @@ def daily_sales(request):
         .order_by('date')
     )
 
-    return Response(daily_sales)    
+    return Response(daily_sales)
