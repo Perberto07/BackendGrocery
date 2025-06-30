@@ -14,6 +14,7 @@ from datetime import datetime, timedelta
 from django.db.models.functions import TruncDate
 from django.utils.dateparse import parse_date
 
+
 class ProtectedViewSet(APIView):
     permission_classes = [IsAuthenticated]
     
@@ -124,6 +125,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
         category = get_object_or_404(self.queryset, pk=pk)
         category.delete()
         
+ 
 class CustomerViewSet(viewsets.ModelViewSet):
 
     queryset = Customer.objects.all().annotate(
@@ -241,7 +243,7 @@ def most_bought_products(request):
         .filter(**filters)
         .values('product__product_name')
         .annotate(total_quantity=Sum('quantity'))
-        .order_by('-total_quantity')[:10]  # Top 5 most bought
+        .order_by('-total_quantity')[:5]  # Top 5 most bought
     )
 
     serializer = MostBoughtProductSerializer(data, many=True)
