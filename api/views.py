@@ -20,11 +20,13 @@ class ProtectedViewSet(APIView):
     
     def get(self, request):
         return Response('This is a protected view. You are authenticated.', status=status.HTTP_200_OK)
+    
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [IsAuthenticated]
+    
     
     def create(self, request):
         serializer = self.serializer_class(data=request.data)
@@ -75,7 +77,6 @@ class ProductViewSet(viewsets.ModelViewSet):
         except Product.DoesNotExist:
             return Response({'error': 'Product not found'}, status=status.HTTP_404_NOT_FOUND)
 
-
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
@@ -119,10 +120,10 @@ class CategoryViewSet(viewsets.ModelViewSet):
     def destroy(self, request, pk=None):
         category = get_object_or_404(self.queryset, pk=pk)
         category.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
         
  
 class CustomerViewSet(viewsets.ModelViewSet):
-
     queryset = Customer.objects.all().annotate(
     upper_name=Upper('customer_name')).order_by('upper_name')
     serializer_class = CustomerSerializer
@@ -168,7 +169,8 @@ class TransactionViewSet(viewsets.ModelViewSet):
     queryset = Transactions.objects.all()
     serializer_class = TransactionSerializer
     permission_classes = [IsAuthenticated]
-
+    
+    # All http method are automatically created using ModelViewSet     
     def create(self, request):
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
