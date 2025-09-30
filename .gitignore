@@ -1,4 +1,4 @@
 .env
-build.sh
+#build.sh
 # data.json
 initial_data.json
